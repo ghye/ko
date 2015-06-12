@@ -1,0 +1,14 @@
+KVER := $(shell uname -r)
+PWD = $(shell pwd)
+KERNEL_SRC = /lib/modules/$(KVER)/build 
+
+obj-m := kobject_embedded_attr.o
+#module-objs := kobject.o
+ 
+all:
+	$(MAKE) -C $(KERNEL_SRC) M=$(PWD) modules
+
+clean:
+	rm *.ko
+	rm *.o
+	rm -rf .*.cmd *.o *.mod.c *.ko .tmp_versions *.order *.symvers

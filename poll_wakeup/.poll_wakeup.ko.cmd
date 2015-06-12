@@ -1,0 +1,1 @@
+cmd_/home/ghye/program/ko/poll_wakeup/poll_wakeup.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.2.0-39-generic/scripts/module-common.lds --build-id  -o /home/ghye/program/ko/poll_wakeup/poll_wakeup.ko /home/ghye/program/ko/poll_wakeup/poll_wakeup.o /home/ghye/program/ko/poll_wakeup/poll_wakeup.mod.o
